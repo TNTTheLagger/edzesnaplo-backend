@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/edzesnaplo', [BejegyzesController::class, 'index']);
-Route::post('/edzesnaplo', [BejegyzesController::class, 'store']);
+Route::get('/api/edzesnaplo', [BejegyzesController::class, 'index']);
+Route::post('/api/edzesnaplo', [BejegyzesController::class, 'store']);
