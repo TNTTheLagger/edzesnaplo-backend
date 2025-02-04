@@ -1,7 +1,9 @@
 <?php
 
-use App\Models\Bejegyzes;
+namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+use App\Models\Bejegyzes;
 
 class BejegyzesController extends Controller
 {
@@ -21,7 +23,6 @@ class BejegyzesController extends Controller
             'ismetlesszam.min' => 'Az ismétlésszám minimum 1 lehet!',
             'ismetlesszam.max' => 'Az ismétlésszám maximum 8 lehet!',
         ]);
-
         Bejegyzes::create($request->all());
 
         return response()->json(['success' => true, 'message' => 'Gyakorlat rögzítve!']);
